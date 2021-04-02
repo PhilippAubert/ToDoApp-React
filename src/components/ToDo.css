@@ -1,0 +1,22 @@
+.list-container {
+  margin: 0;
+  padding: 20px;
+  background-color: blue;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.list-items {
+  list-style-type: none;
+  margin: 0;
+  text-align: left;
+  padding: 10px;
+  border: 3px solid #0ff;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #f00;
+  color: #00f;
+  font-weight: 400;
+  font-size: 1.2em;
+
+  margin: 25px;
+}

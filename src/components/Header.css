@@ -1,0 +1,55 @@
+.header {
+  border-radius: 5px 5px 5px 5px;
+
+  padding: 25px;
+  background-color: #00f;
+  border: 3px solid #0ff;
+  color: #00f;
+}
+
+.mainFrame {
+  background-color: blue;
+  margin: 0;
+  padding: 0;
+}
+
+.headline {
+  font-size: 25px;
+  border: 3px solid #0ff;
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  background-color: #f00;
+}
+
+.form {
+}
+
+.inputField {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+input {
+  color: #00f;
+  padding: 3%;
+  font-size: 15px;
+  border: 3px solid #0ff;
+  border-radius: 5px 5px 5px 5px;
+  width: 100%;
+  background-color: #f00;
+  font-weight: 800;
+  padding: 4%;
+}
+
+.AddButton {
+  color: #00f;
+  background-color: #f00;
+  font-weight: 800;
+  border: 3px solid #0ff;
+  padding: 2%;
+  font-size: 15px;
+  border-radius: 5px 5px 5px 5px;
+}
