@@ -8,15 +8,30 @@
 
 .list-items {
   list-style-type: none;
-  margin: 0;
+  margin: 10px 0;
   text-align: left;
   padding: 10px;
   border: 3px solid #0ff;
   border-radius: 15px 15px 15px 15px;
   background-color: #f00;
   color: #00f;
-  font-weight: 400;
+  font-weight: 00;
   font-size: 1.2em;
-
   margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.RemoveButton {
+  font-size: 15px;
+  margin-left: 20px;
+  background-color: #f00;
+  color: #00f;
+  padding: 10px;
+  border: 3px solid #0ff;
+  border-radius: 10px 10px 10px 10px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
 }

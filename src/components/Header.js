@@ -1,22 +1,26 @@
 import "./Header.css";
-import { useState } from "react";
 
-function Header(props) {
+function Header({ onAddToDo }) {
+  function handleAdd(event) {
+    event.preventDefault();
+    const form = event.target;
+    onAddToDo(form.todoinput.value);
+    form.reset();
+  }
   return (
     <div class="mainFrame">
       <header className="header">
         <h1 className="headline">The Doctor Doom Shopping List </h1>
         <div className="inputField">
-          <form className="form">
+          <form onSubmit={handleAdd} className="form">
             <input
               type="text"
-              name="ToDo-Input"
-              id="ToDo-Id"
-              placeholder="Add ToDo"
+              name="todoinput"
+              id="todoinput"
+              placeholder="Type in item. Press return to add"
               className="input"
             />
           </form>
-          <button className="AddButton">ADD</button>
         </div>
       </header>
     </div>
