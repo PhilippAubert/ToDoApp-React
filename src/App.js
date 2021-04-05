@@ -3,6 +3,11 @@ import Header from "./components/Header.js";
 import ToDoList from "./components/ToDoList.js";
 import { useState } from "react";
 
+// const toDoArray = [
+//   { name: "shoppingItem", status: "Pending" },
+//   { name: "running", status: "Done" },
+// ];
+
 export default function App() {
   const [toDo, setToDo] = useState([]);
 
@@ -11,6 +16,7 @@ export default function App() {
       ...toDo,
       {
         name: toDoItem,
+        status: "Pending",
       },
     ];
     setToDo(newToDo);
@@ -21,10 +27,27 @@ export default function App() {
     setToDo(removedToDo);
   }
 
+  function togglePendingButton(buttonContent) {
+    const newButtonContent = toDo.map((task) => {
+      if (task.buttonContent === buttonContent) {
+        return {
+          ...task,
+          isPending: !toDo.isPending,
+        };
+      } else {
+        return toDo;
+      }
+    });
+    setToDo(newButtonContent);
+  }
   return (
     <div className="App">
       <Header onAddToDo={handleAddToDo} />
-      <ToDoList toDo={toDo} onDeleteToDo={handleDeleteToDo} />
+      <ToDoList
+        toDo={toDo}
+        onDeleteToDo={handleDeleteToDo}
+        onClick={togglePendingButton}
+      />
     </div>
   );
 }
