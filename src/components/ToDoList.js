@@ -6,7 +6,7 @@ function ToDoList({ toDo, onTogglePending, onDeleteToDo }) {
     return toDo.map((todoinput, index) => {
       return (
         <ToDo
-          buttonContent={todoinput.status}
+          isDone={todoinput.status}
           key={todoinput.name}
           name={todoinput.name}
           onDelete={onDeleteToDo}

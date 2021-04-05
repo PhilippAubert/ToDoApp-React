@@ -10,14 +10,13 @@ import { useState } from "react";
 
 export default function App() {
   const [toDo, setToDo] = useState([]);
-  const [buttonPending, setButtonPending] = useState();
 
   function handleAddToDo(toDoItem) {
     const newToDo = [
       ...toDo,
       {
         name: toDoItem,
-        status: "Pending",
+        status: false,
       },
     ];
     setToDo(newToDo);
@@ -29,18 +28,20 @@ export default function App() {
   }
 
   function togglePendingButton(buttonContent) {
-    const newButtonContent = buttonPending.map((status) => {
-      if (status.buttonContent === buttonContent) {
+    /* iteriere über alle toDos, schaue nach, ob es ein todo gibt, weclhes den gleichen namen hat, wie "buttonContent" (toDo.name === buttonContent),
+    dann ändere für exakt dieses todo den status */
+    const newButtonContent = toDo.map((status) => {
+      if (status.name === buttonContent) {
         return {
           ...status,
-          isDone: !status.isPending,
+          status: !status.status,
         };
       } else {
         return status;
       }
     });
 
-    setButtonPending(newButtonContent);
+    setToDo(newButtonContent);
   }
 
   return (

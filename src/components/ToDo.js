@@ -1,12 +1,12 @@
 import "./ToDo.css";
 
-function ToDo({ name, onDelete, onToggle, isDone, buttonContent }) {
+function ToDo({ name, onDelete, onToggle, isDone }) {
   function handleDeleteToDo() {
     onDelete(name);
   }
 
   function togglePendingButton() {
-    onToggle(buttonContent);
+    onToggle(name);
   }
 
   return (
@@ -18,7 +18,10 @@ function ToDo({ name, onDelete, onToggle, isDone, buttonContent }) {
             X{" "}
           </button>
           {name}
-          <button className="PendingButton" onClick={togglePendingButton}>
+          <button
+            className={`PendingButton ${isDone ? "DoneButton" : ""}`}
+            onClick={togglePendingButton}
+          >
             {isDone ? "Done" : "Pending"}
           </button>
         </li>
