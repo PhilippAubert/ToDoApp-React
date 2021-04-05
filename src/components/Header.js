@@ -10,7 +10,7 @@ function Header({ onAddToDo }) {
   return (
     <div class="mainFrame">
       <header className="header">
-        <h1 className="headline">The Doctor Dooom Shopping List </h1>
+        <h1 className="headline">To Do List</h1>
         <div className="inputField">
           <form onSubmit={handleAdd} className="form">
             <input

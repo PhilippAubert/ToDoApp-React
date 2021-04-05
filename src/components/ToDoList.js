@@ -1,7 +1,7 @@
 import "./ToDo.css";
 import ToDo from "./ToDo.js";
 
-function ToDoList({ toDo, onClick, onDeleteToDo }) {
+function ToDoList({ toDo, onTogglePending, onDeleteToDo }) {
   function renderToDos() {
     return toDo.map((todoinput, index) => {
       return (
@@ -10,7 +10,7 @@ function ToDoList({ toDo, onClick, onDeleteToDo }) {
           key={todoinput.name}
           name={todoinput.name}
           onDelete={onDeleteToDo}
-          onClick={onClick}
+          onToggle={onTogglePending}
         />
       );
     });

@@ -1,12 +1,12 @@
 import "./ToDo.css";
 
-function ToDo({ name, onDelete, onClick, isDone, buttonContent }) {
+function ToDo({ name, onDelete, onToggle, isDone, buttonContent }) {
   function handleDeleteToDo() {
     onDelete(name);
   }
 
   function togglePendingButton() {
-    onClick(buttonContent);
+    onToggle(buttonContent);
   }
 
   return (

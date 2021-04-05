@@ -10,6 +10,7 @@ import { useState } from "react";
 
 export default function App() {
   const [toDo, setToDo] = useState([]);
+  const [buttonPending, setButtonPending] = useState();
 
   function handleAddToDo(toDoItem) {
     const newToDo = [
@@ -28,25 +29,27 @@ export default function App() {
   }
 
   function togglePendingButton(buttonContent) {
-    const newButtonContent = toDo.map((task) => {
-      if (task.buttonContent === buttonContent) {
+    const newButtonContent = buttonPending.map((status) => {
+      if (status.buttonContent === buttonContent) {
         return {
-          ...task,
-          isPending: !toDo.isPending,
+          ...status,
+          isDone: !status.isPending,
         };
       } else {
-        return toDo;
+        return status;
       }
     });
-    setToDo(newButtonContent);
+
+    setButtonPending(newButtonContent);
   }
+
   return (
     <div className="App">
       <Header onAddToDo={handleAddToDo} />
       <ToDoList
         toDo={toDo}
         onDeleteToDo={handleDeleteToDo}
-        onClick={togglePendingButton}
+        onTogglePending={togglePendingButton}
       />
     </div>
   );
