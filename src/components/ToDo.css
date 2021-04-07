@@ -1,0 +1,53 @@
+.list-container {
+  margin: 0;
+  padding: 10px;
+  background-color: blue;
+  overflow: hidden;
+}
+
+.list-items {
+  list-style-type: none;
+  margin: 10px 0;
+  text-align: left;
+  padding: 10px;
+  border: 3px solid #0ff;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #f00;
+  color: #00f;
+  font-weight: 00;
+  font-size: 1.2em;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.RemoveButton {
+  font-size: 15px;
+  background-color: #f00;
+  color: #0ff;
+  padding: 10px;
+  border: 3px solid #0ff;
+  border-radius: 10px 10px 10px 10px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.PendingButton {
+  font-size: 15px;
+  margin-left: 20px;
+  background-color: #f00;
+  color: #00f;
+  padding: 10px;
+  border: 3px solid #00f;
+  border-radius: 10px 10px 10px 10px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.DoneButton {
+  color: aquamarine;
+  border: 3px solid aquamarine;
+}
